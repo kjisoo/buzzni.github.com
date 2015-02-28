@@ -1,236 +1,226 @@
-/**
- * Site header
+@charset "UTF-8";
+
+.container  {
+    max-width: 60em;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*
+ * 상단 네비게이션바
  */
-.site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
 
-    // Positioning context for the mobile navigation icon
-    position: relative;
-}
+nav {
+    width: 100%;
+    border-bottom: 1px solid #CCC;
 
-.site-title {
-    font-size: 26px;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
+    &:after {
+        content: "";
+        clear: both;
+    }
 
-    &,
-    &:visited {
-        color: $grey-color-dark;
+    ul {
+        overflow: hidden;
+        margin: 0;
+    }
+
+    li {
+        float: left;
+        list-style: none;
+        border-top: 3px solid #434451;
+        width: 25%;
+    }
+
+    a {
+        position: relative;
+        display: block;
+        background: transparent;
+        text-align: center;
+        padding: .7em .4em;
+        font-size: 1em;
+        line-height: 1.75em;
+        font-weight: bold;
+    }
+    
+    a:hover,
+    a:focus,
+    a.active {
+        *zoom:1;
+        font-weight: bold;
+        color: #000;
+    }
+
+    a:hover:before,
+    a:focus:before,
+    a:before,
+    a.active:before {
+        left: 50%;
+    }
+
+    a:before {
+        position:absolute;
+        content:"";
+        top:0;
+        width:0;
+        height:0;
+        border-color:transparent;
+        border-style:solid;
+        border-width:.5em;
+        border-right-color:transparent;
+        border-bottom-color:transparent;
+        border-left-color:transparent;
+        left:-9999px;
+        margin-left:-.25em
+    }
+
+    .members,
+    .members a:before {
+        border-top-color: #468966;
+    }
+
+    .tech-blog,
+    .tech-blog a:before {
+        border-top-color: #FFF0A5;
+    }
+
+    .jobs,
+    .jobs a:before {
+        border-top-color: #FFB03B;
+    }
+
+
+    .blog,
+    .blog a:before {
+        border-top-color: #B64926;
     }
 }
 
-.site-nav {
-    float: right;
-    line-height: 56px;
+/*
+ * 상단 헤더
+ */
 
-    .menu-icon {
-        display: none;
-    }
+header {
+    *zoom:1;
+    background-color:#2b5b84;
+    filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorstr='#FF1E415E',endColorstr='#FF2B5B84');
+    background-image:-webkit-gradient(linear,50% 0,50% 100%,color-stop(10%,#1e415e),color-stop(90%,#2b5b84));
+    background-image:-webkit-linear-gradient(#1e415e 10%,#2b5b84 90%);
+    background-image:-moz-linear-gradient(#1e415e 10%,#2b5b84 90%);
+    background-image:-o-linear-gradient(#1e415e 10%,#2b5b84 90%);
+    background-image:linear-gradient(#1e415e 10%,#2b5b84 90%);
+    -webkit-box-shadow:inset 0 0 50px rgba(0,0,0,0.03),inset 0 0 20px rgba(0,0,0,0.03);
+    -moz-box-shadow:inset 0 0 50px rgba(0,0,0,0.03),inset 0 0 20px rgba(0,0,0,0.03);
+    box-shadow:inset 0 0 50px rgba(0,0,0,0.03),inset 0 0 20px rgba(0,0,0,0.03)
+}
 
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
+/*
+ * 포스트 목록
+ */
 
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
-    }
+.posts {
+    .post-author-info {
+        margin: 0;
+        text-align: left;
 
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
+        .portrait {
+            width: 60px;
+            vertical-align: middle;
+            border-radius: 50%;
             float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
+            margin-left: 40px;
         }
+    }
 
-        .trigger {
-            clear: both;
-            display: none;
-        }
+    li {
+        list-style: none;
+        border-bottom: 1px solid #e9ebf0;
+        padding: 8% 0;
+    }
 
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
+    .post-title {
+        margin: 0 0 5px;
+        font-size: 24px;
     }
 }
 
+/* 페이지네이터 */
 
-
-/**
- * Site footer
- */
-.site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
-}
-
-.footer-heading {
+.pagination {
+    text-align: center;
     font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
-}
+    padding: 10px 0;
+    margin-top: 30px;
 
-.contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
-}
-
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
-}
-
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
-}
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
+    ol {
+        display: inline-block;
+        margin: 14px 24px;
     }
 
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
+    li {
+        display: inline-block;
 
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-
-
-/**
- * Page content
- */
-.page-content {
-    padding: $spacing-unit 0;
-}
-
-.page-heading {
-    font-size: 20px;
-}
-
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
-}
-
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
-
-.post-link {
-    display: block;
-    font-size: 24px;
-}
-
-
-
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
-
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
-
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
+        a {
+            -webkit-transition: 0.2s ease-out all;
+            margin: 4px 0;
+            padding: 9px 14px;
+            border-radius: 2px;
             font-size: 18px;
+            color: #5a6173;
         }
+    }
+
+    .page .current-page,
+    .page .current-page:hover {
+        margin: 4px 0;
+        padding: 9px 14px;
+        border-radius: 2px;
+        font-size: 18px;
+        color: #5a6173;
+        background-color: #f5f7fa;
+    }
+
+    .previous a,
+    .next a,
+    .previous.disabled,
+    .next.disabled {
+        font-size: 18px;
+        color: #5a6173;
+    }
+
+    .previous.disabled,
+    .next.disabled {
+        color: #b0b6c2;
+    }
+
+    .previous,
+    .next {
+        padding: 2% 4%;
+        border-radius: 2px;
+        display: inline-block;
+    }
+
+    .previous:hover,
+    .next:hover,
+    .page a:hover {
+        -webkit-transition: 0.2s ease-out all;
+        background-color: #f5f7fa;
+    }
+}
+
+/*
+ * 푸터
+ */
+
+footer {
+    clear: both;
+    color: #666;
+    padding: 3em 4em;
+
+    .copyright {
+        clear: both;
+        color: #75a8d3;
+        font-size: .75em;
+        text-align: center;
     }
 }

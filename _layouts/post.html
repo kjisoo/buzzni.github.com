@@ -1,15 +1,51 @@
 ---
 layout: default
 ---
+
+<div class="post-header">
+    <div class="frame">
+        <img class="bg" src="../images/{{page.date | date: "%Y-%m-%d"}}.jpg"/>
+    </div>
+    <div class="wrapper">
+        <div class="post-title">
+            <h1>{{page.title}}</h1>
+            <div class="post-excerpt">{{page.excerpt}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="post-meta">
+    <div class="container">
+        <div>
+            <img class="portrait" src="../../../images/{{page.author-email}}.jpg" />
+        </div>
+        <div>
+            <span class="author-name"><a href="mailto:{{page.author-email}}">{{page.author}}</a></span>
+        </div>
+        <div>
+            <span class="post-date">{{ page.date | date: "%Y년 %m월 %d일" }}</span>
+        </div>
+        <div>
+            <ul class="tags">
+                {% for tag in page.tags %}
+                    <li>#{{ tag }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+
 <div class="post">
+    <div class="container">
+        <article class="markdown-body">
+            {{ content }}
+        </article>
+    </div>
+</div>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
+<div class="post-footer">
+    <div class="container">
+       <div class="back-btn"><a href="page.next">다음 글</a></div>
+    </div>
 </div>

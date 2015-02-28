@@ -1,19 +1,25 @@
-<header class="site-header">
+<nav>
 
-  <div class="wrapper">
+    <div class="container"> 
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        <ul>
+            <li class="members">
+                <a href="/about" title="버즈니 소개" {% if 'about.md' == page.path %}class="active"{% endif %}>소개</a>
+            </li>
+            
+            <li class="tech-blog">
+                <a href="/" title="기술 블로그" {% if 'about.md' != page.path and 'jobs.md' != page.path %}class="active"{% endif %}>기술 블로그</a>
+            </li>
 
-    <nav class="site-nav">
-      <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-              <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </nav>
+            <li class="jobs">
+                <a href="/jobs" title="채용정보" {% if 'jobs.md' == page.path %}class="active"{% endif %}>채용정보</a>
+            </li>
 
-  </div>
+            <li class="blog">
+                <a href="http://blog.naver.com/buzzni" title="블로그" target="_blank">블로그</a>
+            </li>
+        </ul>
 
-</header>
+    </div>
+
+</nav>
