@@ -1,0 +1,49 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
+<div class="about-buzzni">
+    <h2>버즈니 소개</h2>
+    <p>
+        <strong>사고 싶은게 있으신가요?</strong> 버즈니 쇼핑 검색엔진이 바로 찾아드릴겁니다.</br>
+        <strong>사고 싶은게 없으시다구요?</strong> 버즈니 쇼핑 검색엔진이 미처 몰랐던 상품들을 보여드릴겁니다.</br>
+        버즈니는 세상에서 가장 멋진 모바일 쇼핑 검색 엔진을 만들고 있습니다.
+    </p>
+</div>
+
+<div class="about-stack">
+    <h2>기술스택</h2>
+    <div class="sub-title">
+        버즈니는 cutting-edge 오픈소스 툴들을 이용하여 빠르고 안정적인 시스템을 구축하고 있습니다.
+    </div>
+
+    <div class="stacks">
+        {% for stack in site.data.stacks %}
+            <dl>
+                <dt>{{ stack.name }}</dt>
+                <dd>{{ stack.description }}</dd>
+            </dl>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="about-members">
+    <h2> 엔지니어링 팀</h2>
+    <div class="sub-title">
+        버즈니에는 현재 <b>{{ site.data.members | size }}</b>명의 엔지니어들이 일하고 있습니다.</br>
+        만나고 싶은 사람, 함께 일해보고 싶은 사람이 있다면 언제든 연락해주세요.
+    </div>
+
+    <ul>
+        {% for member in site.data.members %}
+            <li>
+                <a href="mailto:{{ member.email }}">
+                    <img src="/images/{{ member.email }}.png"/>
+                    <span>{{ member.nick }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

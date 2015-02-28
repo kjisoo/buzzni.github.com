@@ -1,14 +1,38 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+<header>
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+    <div class="container"> 
+        {% if 'jobs.html' == page.path %}
+            <div class="bg jobs"></div>
+        {% else %}
+            <div class="bg"></div>
+            <div class="wrapper">
+                <div class="table">
+                    <div class="row">
+                        <h1>Buzzni Engineering</h1>
+                    </div>
+                    <div class="row">
+                        <p>
+                            Building the world's best shopping search platform finding<br/>
+                            best products what you want to buy
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+</header>
+
+<div class="page">
+
+    <div class="container">
+        <article class="markdown-body">
+            {{ content }}
+        </article>
+    </div>
 
 </div>

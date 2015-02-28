@@ -17,10 +17,15 @@ body {
 a {
     text-decoration: none;
     color: #6585c1;
+    outline: none;
 
     &:visited {
         color: #999;
     }
+}
+
+img {
+    border: none;
 }
 
 .clearfix {

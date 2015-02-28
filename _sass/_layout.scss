@@ -76,23 +76,22 @@ nav {
 
     .members,
     .members a:before {
-        border-top-color: #468966;
+        border-top-color: #2C3E50;
     }
 
-    .tech-blog,
-    .tech-blog a:before {
-        border-top-color: #FFF0A5;
+    .blog,
+    .blog a:before {
+        border-top-color: #E74C3C;
     }
 
     .jobs,
     .jobs a:before {
-        border-top-color: #FFB03B;
+        border-top-color: #3498DB;
     }
 
-
-    .blog,
-    .blog a:before {
-        border-top-color: #B64926;
+    .github,
+    .github a:before {
+        border-top-color: #ECF0F1;
     }
 }
 
@@ -101,18 +100,74 @@ nav {
  */
 
 header {
-    *zoom:1;
-    background-color:#2b5b84;
-    filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorstr='#FF1E415E',endColorstr='#FF2B5B84');
-    background-image:-webkit-gradient(linear,50% 0,50% 100%,color-stop(10%,#1e415e),color-stop(90%,#2b5b84));
-    background-image:-webkit-linear-gradient(#1e415e 10%,#2b5b84 90%);
-    background-image:-moz-linear-gradient(#1e415e 10%,#2b5b84 90%);
-    background-image:-o-linear-gradient(#1e415e 10%,#2b5b84 90%);
-    background-image:linear-gradient(#1e415e 10%,#2b5b84 90%);
-    -webkit-box-shadow:inset 0 0 50px rgba(0,0,0,0.03),inset 0 0 20px rgba(0,0,0,0.03);
-    -moz-box-shadow:inset 0 0 50px rgba(0,0,0,0.03),inset 0 0 20px rgba(0,0,0,0.03);
-    box-shadow:inset 0 0 50px rgba(0,0,0,0.03),inset 0 0 20px rgba(0,0,0,0.03)
-}
+    position: relative;
+    width: 100%;
+    height: 250px;
+    clear: both;
+    color: white;
+    margin-bottom: 2em;
+
+    .bg {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        padding: 0;
+        width: 100%;
+        height: 250px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background: url(/images/header-bg.png) center center no-repeat #265091;
+
+        &.jobs {
+            background: url(/images/jobs-bg.png) center center no-repeat #265091;
+        }
+    }
+
+    .wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        color: white;   
+        z-index: 999;
+
+        .table {
+            display: table;
+            margin: 0 auto;
+
+            .row {
+                display: table-row;
+
+                h1 {
+                    display: table-cell;
+                    vertical-align: bottom;
+                    font-size: 52px;
+                    line-height: 1.2em;
+                    letter-spacing: -0.02em;
+                    font-weight: 700;
+                    margin-left: -1.8px;
+                    height: 125px;
+                }
+
+                p {
+                    display: table-cell;
+                    vertical-align: top;
+                    width: auto;
+                    font-size: 26px;
+                    color: white;
+                    letter-spacing: .01rem;
+                    font-weight: 400;
+                    word-wrap: break-word;
+                    height: 125px;
+                }
+            }
+        }   // .wrapper ends
+    }
+}   // header ends
 
 /*
  * 포스트 목록

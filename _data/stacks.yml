@@ -1,0 +1,11 @@
+- name: Python
+  description: 파이썬은 사랑입니다. 버즈니의 모든 프로그램은 파이썬으로 만들어지고 있습니다.
+
+- name: ElasticSearch
+  description: 매일 다양한 데이터가 끊임없이 들어오고 있으며, 이런 데이터를 분석하기 위해 ElasticSearch 를 적극적으로 이용하고 있습니다.
+
+- name: Amazon Web Service
+  description: Route53, EC2, CloudFront, RDS, ElastiCache 등 다양한 AWS 제품군을 적극적으로 이용해 안정적인 서비스를 제공하고 있습니다.
+
+- name: PostgreSQL, MongoDB, Redis, MemcacheDB
+  description: 크롤링, 로그분석 등의 데이터들은 소비 방식에 따라 RDBMS, NoSQL 등 다양한 형태의 스토리지에 저장됩니다.

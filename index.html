@@ -2,23 +2,26 @@
 layout: default
 ---
 
-{% if paginator.page == 1 %}
-    {% assign base_path = '.' %}
-{% else %}
-    {% assign base_path = '..' %}
-{% endif %}
-
-<!--
 <header>
+
     <div class="container"> 
-        <h1>
-            <a href="/">
-                <img src="https://www.python.org/static/img/python-logo@2x.png">
-            </a>
-        </h1>
+        <div class="bg"></div>
+        <div class="wrapper">
+            <div class="table">
+                <div class="row">
+                    <h1> Buzzni Engineering </h1>
+                </div>
+                <div class="row">
+                    <p>
+                        Building the world's best shopping search platform finding<br/>
+                        best products what you want to buy
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
+
 </header>
--->
 
 <div class="container">
 
@@ -29,8 +32,8 @@ layout: default
                     {% if post.author %}
                         <div class="post-author-info">
                             {% if post.author-email %}
-                                <img class="portrait" src="{{base_path}}/images/{{post.author-email}}.jpg" />
-                                <h2 class="post-title"><a href="{{ base_path }}{{ post.url }}"><span class="post-title-words">{{ post.title }}</span></a></h2>
+                                <img class="portrait" src="/images/{{post.author-email}}.png" />
+                                <h2 class="post-title"><a href="/{{ post.url }}"><span class="post-title-words">{{ post.title }}</span></a></h2>
                                 <p class="post-description">{{ post.description }}</p>
                                 <span class="post-date">{{ post.date | date: "%Y년 %m월 %d일" }}</span>
                                 <span class="sep">|</span> 
