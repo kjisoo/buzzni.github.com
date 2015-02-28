@@ -3,7 +3,9 @@
  */
 
 .page {
+
     .about-members {
+
         ul {
             list-style: none;
             padding: 0;
@@ -50,7 +52,10 @@
                     transition: opacity 0.25s ease-in-out;
                     z-index: 999;
                 }
-            }
-        }
-    }
-}
+            } // li ends
+
+        } // ul ends
+
+    } // .about-members ends
+
+} // .page ends
