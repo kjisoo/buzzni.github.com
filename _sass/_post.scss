@@ -6,42 +6,40 @@
     position: relative;
     width: 100%;
     height: 500px;
-    clear: both;
-    background-color: #000;
     color: white;
+    clear: both;
 
-    .frame {
+    .layer, .bg {
         position: absolute;
         top: 0;
         left: 0;
         padding: 0;
         width: 100%;
-        height: 500px;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-color: black;
-        z-index: -10;
+        height: 100%;
+    }
+
+    .layer {
+        z-index: -1;
+        background-color: #000;
+        opacity: 0.6;
     }
 
     .bg {
-        display: block;
-        width: 100%;
-        height: 500px;
-        opacity: 0.4;
+        background-size: cover;
+        z-index: -2;
     }
 
     .wrapper {
         display: table;
         margin: 0 auto;
-        height: 500px;
+        height: 100%;
 
         .post-title {
             display: table-cell;
             margin: 0 auto;
-            height: 500px;
+            height: 100%;
             vertical-align: middle;
+            text-shadow: 0 0 4px #000;
 
             h1 {
                 text-align: left;
@@ -85,7 +83,11 @@
         div {
             display: table-cell;
             vertical-align: middle;
-            padding: 0 10px;
+            padding-left: 20px;
+
+            &.author-name {
+                padding-left: 10px;
+            }
 
             img {
                 width: 32px;
@@ -97,7 +99,7 @@
 
         .tags li {
             color: #999;
-            font-size: 14px;
+            font-size: 16px;
             display: inline-block;
         }
     }
@@ -129,3 +131,13 @@
         }
     }
 }   // .post-footer ends
+
+.footnotes {
+    border-top: 1px solid #CCC;
+    margin: 5em 0;
+    padding: 1em 0;
+
+    ol li {
+        line-height: 1.6em;
+    }
+}
