@@ -56,4 +56,4 @@
 
 
   [Jekyll]: http://jekyllrb.com
-  [Markdown]: http://nolboo.github.io/blog/2014/03/25/github-flavored-markdown/
+  [Markdown]: https://guides.github.com/features/mastering-markdown/

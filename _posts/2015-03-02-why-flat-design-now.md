@@ -24,7 +24,7 @@ publish: false
 
 iOS7으로 플랫디자인을 접하신 분들도 꽤 많을 거라고 생각합니다. 저도 그 중의 하나였구요.
 
-물론 2012년에도 [플랫디자인의 시대](http://layervault.tumblr.com/post/32267022219/flat-interface-design)를 주장하던 급진주의자들이
+물론 2012년에도 [플랫디자인의 시대]를 주장하던 급진주의자들이
 
 많이 있었지만 저같은 범인의 눈엔 그냥 흘러가는 디자인 흐름중의 하나였죠.
 
@@ -68,9 +68,9 @@ iOS7으로 플랫디자인을 접하신 분들도 꽤 많을 거라고 생각합
 
 애플에서 줄곧 밀어왔던 스큐어모피즘은 길었지만 앱 디자인을 벗어나지 못한 관계로 너무 좁았습니다.
 
-반면 [플랫디자인](http://en.wikipedia.org/wiki/Flat_design) 은 안드로이드, 아이폰, 윈도우폰 등의 모바일시장은 말할 것도 없고,
+반면 [플랫디자인]은 안드로이드, 아이폰, 윈도우폰 등의 모바일시장은 말할 것도 없고,
 
-가장 유명한 웹 레이아웃 프레임워크인 [부트스트랩](getbootstrap.com)에서도 사용하고 있을 정도로
+가장 유명한 웹 레이아웃 프레임워크인 [부트스트랩]에서도 사용하고 있을 정도로
 
 웹과 앱을 가리지 않고 플랫디자인은 그 세력을 확장해나가고 있습니다.
 
@@ -171,7 +171,7 @@ iOS7으로 플랫디자인을 접하신 분들도 꽤 많을 거라고 생각합
 
 우리는 원하든 원치 않든 미니멀리즘과 플랫디자인의 시대를 살고 있으며 대부분의 경우 주어진 디자인을 받아들이며 살고 있습니다.
 
-[플랫디자인은 곧 망할거야!!](https://tackk.com/why-flat-design-will-die/)라고 자신있게 주장한 사람조차**좀 덜 플랫한 디자인** 정도의 추측밖에 못할 정도로
+[플랫디자인은 곧 망할거야!!]라고 자신있게 주장한 사람조차**좀 덜 플랫한 디자인** 정도의 추측밖에 못할 정도로
 
 예측이라는 것은 어려운 것입니다만, 그럼에도 불구하고 앞으로 어떠한 흐름이 올지 스스로 가설을 세우고
 
@@ -180,13 +180,14 @@ iOS7으로 플랫디자인을 접하신 분들도 꽤 많을 거라고 생각합
 여러분이 생각하는 다음 디자인 트렌드는 무엇입니까?
 
 
+[부트스트랩]: http://getbootstrap.com
+[플랫디자인]: http://en.wikipedia.org/wiki/Flat_design
+[플랫디자인의 시대]: http://layervault.tumblr.com/post/32267022219/flat-interface-design
+[플랫디자인은 곧 망할거야!!]: https://tackk.com/why-flat-design-will-die/
+
 
 [^1]: http://www.quora.com/Flat-User-Interface-Design/Why-is-flat-design-gaining-popularity-in-2013/
-
 [^2]: http://www.designyourway.net/blog/inspiration/flat-design-is-not-a-trend-its-been-around-for-some-time/
-
 [^3]: http://www.lovelyredsky.com/red/%EB%B2%88%EC%97%AD-a-look-at-flat-design-and-why-its-significant-ux-magazine/
-
 [^4]: 디자인의 각 요소(합목적성, 심미성, 독창성, 경제성)들이 서로 조화를 이루어 유지되는 것
-
 [^5]: http://mobiloud.com/blog/2013/06/what-is-flat-design-and-why-its-good-news-for-you/
