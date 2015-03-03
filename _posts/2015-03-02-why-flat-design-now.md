@@ -6,7 +6,7 @@ frame: http://nextecommerce.com.br/wp-content/uploads/2013/07/icones.jpg
 author: vincent
 email: vincent@buzzni.com
 tags: design, flat, flat design, minimalism, trend, ui
-publish: false
+publish: true
 ---
 
 # 독자 가이드
