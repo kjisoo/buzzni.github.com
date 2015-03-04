@@ -6,7 +6,7 @@ frame: http://i2.wp.com/elenacuoco.altervista.org/blog/wp-content/uploads/2014/0
 author: Justin
 email: justin@buzzni.com
 tags: machine learning, regression, server, mining
-publish: true
+publish: false
 
 ---
 
