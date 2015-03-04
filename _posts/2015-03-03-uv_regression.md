@@ -324,7 +324,7 @@ _LOG_ES_URL = "http://localhost:9200/"
  - 위 코드는 참고만 하시고, 개념을 이해한 후에 개별로 적용을 하면서 익혀 나가시면 될것 같습니다.
  - 그럼 모두들 즐코(즐거운 코딩) 하세요~    
  - [UV Regression Ipython Notebook](https://www.dropbox.com/s/ubtjfbd39xo6ski/UV_regression.ipynb?dl=0)
-
+ - 그리고 저희 개발팀과 함께하실 서버 개발자 및 안드로이드 개발자를 모십니다. 많이들 지원해주세요~ (recruit@buzzni.com)
     
 
 
