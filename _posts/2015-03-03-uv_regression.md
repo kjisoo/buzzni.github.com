@@ -14,14 +14,14 @@ publish: true
 
 저는 Search Engine 과 Machine Learning 분야를 연구하고 이를 활용한 응용 서비스를 만드는 것을 굉장히 좋아합니다. 2007년도에 버즈니를 창업하고 나서 지금까지 꾸준히 관련 기술을 연구하고 실제 서비스에 많이 적용해 왔습니다. 
 
-이 분야를 정말 좋아한 나머지 업무가 끝나고 나서도 취미로 관련 새로운 기술들을 익혀서 새로운 응용들도 만들어 보기도 합니다. 
+이 분야를 정말 좋아한 나머지 업무가 끝나고 나서도 취미로 새로운 기술들을 익혀서 새로운 응용들도 만들어 보기도 합니다.
 
 오늘 소개해드릴 내용은 그런 취미 활동중 하나로 업무를 하다가 반복적으로 생각 했던 일을 Machine Learning 을 실제로 사용하여 해결한 사례입니다. 
 
 이 주제는 버즈니 개발팀에서 현재 진행하는  Data Mining Study 의 첫번째 실습 예제입니다.
 
 #동기 
-저희는 서비스에서 통계를 아주 중요하게 생각을 하고, 실제 사무실 내에서도 큰 TV 에 현재 접속자 수 등 중요 통계를 항상 띄워 놓고 있었습니다.
+저희는 서비스에서 통계를 아주 중요하게 생각을 하고, 실제 사무실 내에서도 큰 TV 에 현재 접속자 수 등 중요 통계를 항상 띄워 놓습니다.
 
 그래서 매 시간대에 현재까지 접속자 수(UV)를 기준으로 오늘 UV 는 대략 얼마 정도가 될것이라고 예측을 머리속으로 해왔습니다. 
 
@@ -31,16 +31,16 @@ publish: true
 
 사람이 기존 과거 데이터 기록을 이용하여 오늘의 트래픽을 예측하듯이 Machine Learning 을 활용하면 구지 머리속으로 대략 예측하지 않더라도, 더 정확하게 예측할 수 있지 않을까 하는 생각이 들었습니다.
 
-이전에 공부를 했던 데이터 마이닝 모델들을 쭉 생각을 해봤습니다. 생각해보니 그동안 공부만 하고 실제 업무에는 활용을 잘 안했던 Regression을 이용하면 딱이겠다는 생각이 들었습니다.
+이전에 공부를 했던 데이터 마이닝 모델들을 쭉 생각을 해봤습니다. 생각해보니 그동안 공부만 하고 실제 업무에는 활용을 잘 안했던 Regression 모델을 이용하면 딱이겠다는 생각이 들었습니다.
 
 #준비물
 잘 아시는 분들도 있겠지만, 처음 접하는 분들을 위해서 준비물에 대해서 좀 더 설명을 드리겠습니다. 
 
 1. [Scikit-Learn] : Python 에서 Machine Learning 을 하는 대표적인 Library 입니다. 
-2. [IPython] : IPython Notebook 이란 것을 주로 사용합니다. 해외에서 하는 많은 컨퍼런스를 보면 Ipython 으로 튜토리얼을 진행하는 것을 상당히 많이 볼 수 있습니다. pycon에 보면 IPython 을 안 쓰는 튜토리얼을 찾아 보기 힘들정도로 많이 사용합니다. web browser 에서 interactive 하게 다양한 파라미터로 실험을 하고 그래프를 그리기가 아주 편하게 되어 있어서 science 용으로 딱 좋습니다. 
+2. [IPython] : IPython Notebook 이란 것을 주로 사용합니다. 해외에서 하는 많은 컨퍼런스를 보면 IPython 으로 튜토리얼을 진행하는 것을 상당히 많이 볼 수 있습니다. pycon에 보면 IPython 을 안 쓰는 튜토리얼을 찾아 보기 힘들정도로 많이 사용합니다. web browser 에서 interactive 하게 다양한 파라미터로 실험을 하고 그래프를 그리기가 아주 편하게 되어 있어서 science 용으로 딱 좋습니다.
 
 #데이터 
-여기서 필요한 데이터는 최근 한달간 각 시간대별 UV 및 각 일자별 UV 이다. 버즈니에서는 로그 데이터를 EFK(ElasticSearch, Fluentd, Kibana)를 사용하여 분석하고 관리하고 있습니다.
+여기서 필요한 데이터는 최근 한달간 각 시간대별 UV 및 각 일자별 UV 입니다. 버즈니에서는 로그 데이터를 EFK(ElasticSearch, Fluentd, Kibana)를 사용하여 분석하고 관리하고 있습니다.
 
 이 데이터를 추출할때 Kibana 를 통해서 ElasticSearch 에 어떤 Query 를 만들어야 시간당 UV, 일간 UV 를 가져오는지 알 수 있습니다. 
 ![img](https://dl-web.dropbox.com/get/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202015-03-04%2021.32.47.png?_subject_uid=22018269&w=AABPmuA57gtVoowTWNOYF87nInusxEGnm94k_oDuX7dofQ)
@@ -318,8 +318,12 @@ _LOG_ES_URL = "http://localhost:9200/"
     print "diff2:",sum(diff2_list)/len(diff2_list)
 {% endhighlight %}
 
-    
-
+# 마무리 
+ - 이상으로 Regression 모델을 활용한 간단한 UV 예측 모델을 만들어 보았습니다. 
+ - 실제로 똑같이 따라하면 정확히 나오는 데이터 Source 까지 포함된 Ipython Notebook 을 올리고 싶은 마음도 굴뚝 같지만 UV 가 내부 데이터라 외부에 공개할 수 없어서 데이터 소스는 http://localhost:9200 로 해놓은 점은 양해 부탁 드립니다.
+ - 위 코드는 참고만 하시고, 개념을 이해한 후에 개별로 적용을 하면서 익혀 나가시면 될것 같습니다.
+ - 그럼 모두들 즐코(즐거운 코딩) 하세요~    
+ - [UV Regression Ipython Notebook](https://www.dropbox.com/s/ubtjfbd39xo6ski/UV_regression.ipynb?dl=0)
 
     
 
