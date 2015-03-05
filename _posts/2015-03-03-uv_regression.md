@@ -6,7 +6,7 @@ frame: http://i2.wp.com/elenacuoco.altervista.org/blog/wp-content/uploads/2014/0
 author: Justin
 email: justin@buzzni.com
 tags: machine learning, regression, server, mining
-publish: false
+publish: true
 ---
 
 안녕하세요? 버즈니에서 검색, 데이터 마이닝 부분을 맡고 있는 저스틴 (Justin) 입니다. 
