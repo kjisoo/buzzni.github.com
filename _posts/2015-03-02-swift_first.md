@@ -10,6 +10,8 @@ publish: true
 
 ---
 
+# 시작하며
+
 안녕하세요. 버즈니의 iOS 개발자 엔비 (Envy) 입니다.
 
 Objective-C 개발자의 Swift의 간단한 어플 개발에 대한 글을 적으려고 합니다.
@@ -172,7 +174,7 @@ func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLReques
 }
 {% endhighlight %}
 
-# 마치며
+# 정리하며
 
 본 글에서는 웹(뷰)를 생성 하고 및 Delegate에 연결하여 사용하는 방법을 설명하고 간단한 앱을 만들어 보았습니다.
 

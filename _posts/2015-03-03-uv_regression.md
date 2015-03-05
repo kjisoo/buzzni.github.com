@@ -9,6 +9,8 @@ tags: machine learning, regression, server, mining
 publish: true
 ---
 
+# 시작하며
+
 안녕하세요? 버즈니에서 검색, 데이터 마이닝 부분을 맡고 있는 저스틴 (Justin) 입니다. 
 
 저는 Search Engine 과 Machine Learning 분야를 연구하고 이를 활용한 응용 서비스를 만드는 것을 굉장히 좋아합니다.
@@ -24,7 +26,7 @@ publish: true
 이 주제는 현재 버즈니 개발팀에서 진행하는 Data Mining Study 의 첫번째 실습 예제입니다.
 
 
-# 동기
+# 개요
 
 저희는 사무실 내에서도 큰 TV 에 현재 접속자 수 등 중요 통계를 항상 띄워 놓을 정도로, 통계를 아주 중요하게 생각하고 있습니다. 
 
@@ -329,7 +331,7 @@ print "diff2:",sum(diff2_list)/len(diff2_list)
 {% endhighlight %}
 
 
-# 끝내며 
+# 정리하며
  - 이상으로 Regression 모델을 활용한 간단한 UV 예측 모델을 만들어 보았습니다. 
  - 실제로 똑같이 따라하면 정확히 나오는 데이터 Source 까지 포함된 Ipython Notebook 을 올리고 싶은 마음도 굴뚝 같지만 UV 가 내부 데이터라 외부에 공개할 수 없어서 데이터 소스는 http://localhost:9200 로 해놓은 점은 양해 부탁 드립니다.
  - 위 코드는 참고만 하시고, 개념을 이해한 후에 개별로 적용을 하면서 익혀 나가시면 될것 같습니다.
