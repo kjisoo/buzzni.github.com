@@ -119,10 +119,14 @@ header {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        background: url(/images/header-bg.png) center center no-repeat #FFCC4B;
+        background: url(/images/blog-bg.png) center center no-repeat #FFEC01;
 
         &.jobs {
-            background: url(/images/jobs-bg.png) center center no-repeat #265091;
+            background: url(/images/jobs-bg.png) center center no-repeat #FFEC01;
+        }
+
+        &.about {
+            background: url(/images/about-bg.png) center center no-repeat #FFEC01;
         }
     }
 
