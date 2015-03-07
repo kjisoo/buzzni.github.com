@@ -5,7 +5,9 @@ layout: default
 <header>
 
     <div class="container"> 
-        {% if 'jobs.md' == page.path %}
+        {% if 'about.html' == page.path %}
+            <div class="bg about"></div>
+        {% else %}{% if 'jobs.md' == page.path %}
             <div class="bg jobs"></div>
         {% else %}
             <div class="bg"></div>
@@ -22,7 +24,7 @@ layout: default
                     </div>
                 </div>
             </div>
-        {% endif %}
+        {% endif %}{% endif %}
     </div>
 
 </header>
