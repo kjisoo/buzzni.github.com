@@ -6,7 +6,7 @@ frame: http://www.neustar.biz/blog/big-data.jpg
 author: roland
 email: roland@buzzni.com
 tags: sql
-publish: false
+publish: true
 
 ---
 
