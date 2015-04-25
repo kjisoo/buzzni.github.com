@@ -33,6 +33,21 @@ permalink: /jobs/
 <strike>이력서 보낸 다음날 연락이 가도 놀라지 마세요.</strike>
 
 
+## 언론속의 버즈니
+
+[인터넷 소통에 눈뜨고 박사학위 포기한 사연](http://www.mt.co.kr/view/mtview.php?type=1&no=2011112414483555185&outlink=1)
+
+[당신이 원하는 것을 찾아분다 의견검색 기술의 새로운 샛별 버즈니](http://www.ddaily.co.kr/news/article.html?no=100846)
+
+[보일러실서 출발한 버즈니의 도전](http://www.bloter.net/archives/146337)
+
+[모바일 홈쇼핑 검색 어플 '홈쇼핑모아' 최단기간 80만 다운로드 돌파](http://economy.hankooki.com/lpage/entv/201412/e2014121616330694210.htm)
+
+[홈쇼핑모아, 오는 27일까지 '100만 다운로드 고객감사 이벤트'실시](http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00013&news_seq_no=2211926)
+
+[공개SW 활용 성공사례 - 공개SW 기반 홈쇼핑 포털 서비스](http://www.oss.kr/oss_repository10/618097)
+
+
 ## 모집안내
 
 안정적인 직장에서 오랜 기간 함께 호흡을 맞추며 멋진 서비스를 만들어가고 싶다면 바로 지원하세요!
@@ -42,6 +57,8 @@ permalink: /jobs/
 * 근무장소: **사당역 5분거리** 쾌적한 사무실
 
 * 고용형태: **1개월의 풀타임 계약직(4대보험 적용)**으로 시작하여 서로를 알아간뒤 정규직으로 전환합니다.
+
+* 근무조건: 주 5일제, 9 ~ 10시 탄력출근
 
 * 연봉: 부러우면 지는겁니다. **동종업계에서도 남부럽지 않게 드립니다.**
 
