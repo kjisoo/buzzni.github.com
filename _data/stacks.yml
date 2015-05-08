@@ -11,4 +11,7 @@
   description: 크롤링, 로그분석 등의 데이터들은 소비 방식에 따라 RDBMS, NoSQL 등 다양한 형태의 스토리지에 저장됩니다.
   
 - name: Objective-C, Swift
-  description: iOS 어플리케이션은 Objective-C & Swift로 개발되고 있습니다.
+  description: iOS 앱이 Objective-C & Swift로 개발되고 있습니다.
+
+- name: Java
+  description: 안드로이드앱과 자체개발한 형태소분석기는 Java로 개발되고 있습니다.
