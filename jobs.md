@@ -35,11 +35,17 @@ permalink: /jobs/
 
 ## 언론속의 버즈니
 
-[인터넷 소통에 눈뜨고 박사학위 포기한 사연]: http://www.mt.co.kr/view/mtview.php?type=1&no=2011112414483555185&outlink=1
-[당신이 원하는 것을 찾아분다 의견검색 기술의 새로운 샛별 버즈니]: http://www.ddaily.co.kr/news/article.html?no=100846
-[보일러실서 출발한 버즈니의 도전]: http://www.bloter.net/archives/146337
-[모바일 홈쇼핑 검색 어플 '홈쇼핑모아' 최단기간 80만 다운로드 돌파]: http://economy.hankooki.com/lpage/entv/201412/e2014121616330694210.htm
-[홈쇼핑모아, 오는 27일까지 '100만 다운로드 고객감사 이벤트'실시]: http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00013&news_seq_no=2211926
+[인터넷 소통에 눈뜨고 박사학위 포기한 사연](http://www.mt.co.kr/view/mtview.php?type=1&no=2011112414483555185&outlink=1){:target="_blank"}
+
+[당신이 원하는 것을 찾아분다 의견검색 기술의 새로운 샛별 버즈니](http://www.ddaily.co.kr/news/article.html?no=100846){:target="_blank"}
+
+[보일러실서 출발한 버즈니의 도전](http://www.bloter.net/archives/146337){:target="_blank"}
+
+[모바일 홈쇼핑 검색 어플 '홈쇼핑모아' 최단기간 80만 다운로드 돌파](http://economy.hankooki.com/lpage/entv/201412/e2014121616330694210.htm){:target="_blank"}
+
+[홈쇼핑모아, 오는 27일까지 '100만 다운로드 고객감사 이벤트'실시](http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00013&news_seq_no=2211926){:target="_blank"}
+
+[공개SW 활용 성공사례 - 공개SW 기반 홈쇼핑 포털 서비스](http://www.oss.kr/oss_repository10/618097){:target="_blank"}
 
 
 ## 모집안내
@@ -130,7 +136,7 @@ permalink: /jobs/
     - 2년 이상의 웹 / 모바일 웹 개발 경험이 있으신 분
 
 * **해당되시면 가산점을 드립니다**
-    - [왜 그 버튼을 3픽셀 옮겨야만 하는가?](http://ppss.kr/archives/21322) 로 고민해보신 분 
+    - [왜 그 버튼을 3픽셀 옮겨야만 하는가?](http://ppss.kr/archives/21322){:target="_blank"} 로 고민해보신 분 
     - Bootstrap 커스터마이징 경험이 있으신 분
     - Underscore 또는 AngularJS 를 좀 써보신 분
 
