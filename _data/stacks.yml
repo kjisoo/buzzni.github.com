@@ -1,17 +1,20 @@
 - name: Python
-  description: 파이썬은 사랑입니다. 버즈니의 모든 프로그램은 파이썬으로 만들어지고 있습니다.
+  description: 파이썬은 사랑입니다. 버즈니의 거의 모든 프로그램은 파이썬으로 만들어지고 있습니다.
 
-- name: ElasticSearch
-  description: 매일 다양한 데이터가 끊임없이 들어오고 있으며, 이런 데이터를 분석하기 위해 ElasticSearch 를 적극적으로 이용하고 있습니다.
+- name: Machine Learning
+  description: 딥러닝, SVM 등의 머신러닝 기술을 적극적으로 활용하여 우리가 보유하고 있는 방대한 데이터에서 새로운 가치를 만들어내고 있습니다.
 
 - name: Amazon Web Service
-  description: Route53, EC2, CloudFront, RDS, ElastiCache 등 다양한 AWS 제품군을 적극적으로 이용해 안정적인 서비스를 제공하고 있습니다.
+  description: Route53, EC2, RDS, ElastiCache 등 다양한 AWS 제품군을 적극적으로 이용해 안정적인 서비스를 제공하고 있습니다.
 
-- name: PostgreSQL, MongoDB, Redis, MemcacheDB
+- name: ElasticSearch
+  description: 버즈니는 검색엔진회사로서 AWS 위에 있는 여러대의 ES 클러스터를 통해 구글과 네이버 못지 않은 검색엔진을 만들어 나가고 있습니다.
+
+- name: PostgreSQL, MongoDB, CouchBase, Redis, MemcacheDB
   description: 크롤링, 로그분석 등의 데이터들은 소비 방식에 따라 RDBMS, NoSQL 등 다양한 형태의 스토리지에 저장됩니다.
   
-- name: Objective-C, Swift
-  description: iOS 앱이 Objective-C & Swift로 개발되고 있습니다.
+- name: Swift
+  description: iOS 앱이 Swift로 개발되어 있습니다.
 
 - name: Java
   description: 안드로이드앱과 자체개발한 형태소분석기는 Java로 개발되고 있습니다.
