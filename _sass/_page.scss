@@ -19,14 +19,6 @@
                 margin: 6px;
                 padding: 0;
 
-                a {
-                    display: block;
-
-                    &:hover span {
-                        opacity: 1;
-                    }
-                }
-
                 img {
                     width: 112px;
                     height: 112px;
@@ -51,6 +43,10 @@
                     opacity: 0;
                     transition: opacity 0.25s ease-in-out;
                     z-index: 999;
+
+                    &:hover {
+                        opacity: 1;
+                    }
                 }
             } // li ends
 
