@@ -2,39 +2,22 @@
 layout: default
 ---
 
-<header>
-
-    <div class="container"> 
-        {% if 'about.html' == page.path %}
-            <div class="bg about"></div>
-        {% else %}{% if 'jobs.md' == page.path %}
-            <div class="bg jobs"></div>
-        {% else %}
-            <div class="bg"></div>
-            <div class="wrapper">
-                <div class="table">
-                    <div class="row">
-                        <h1>Buzzni Engineering</h1>
-                    </div>
-                    <div class="row">
-                        <p>
-                            Building the world's best shopping search platform finding<br/>
-                            best products what you want to buy
-                        </p>
-                    </div>
-                </div>
-            </div>
-        {% endif %}{% endif %}
-    </div>
-
-</header>
-
-<div class="page">
-
-    <div class="container">
-        <article class="markdown-body">
-            {{ content }}
-        </article>
-    </div>
-
-</div>
+<article {% if page.feature-img %}class="feature-image"{% endif %}>
+  <header id="main" style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
+    <h1 id="{{ page.title | default: "" | cgi_escape }}" class="title">
+        {{ page.title }}
+    </h1>
+    
+    {% if page.subtitle %}
+    <h2 class="subtitle">{{ page.subtitle }}</h2>
+    {% endif %}
+      
+  </header>
+  <section class="post-content">{{ content }}</section>
+    
+    
+  <!-- Tag list for portfolio -->
+  {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
+  {% include tags_list.html tags=tag_list %}
+    
+</article>

@@ -1,0 +1,51 @@
+<header class="site-header">    
+    <!-- Logo and title -->
+	<div class="branding">
+		<a href="{{ site.baseurl }}/">
+			<img class="avatar" src="{{ site.baseurl }}/{{ site.theme_settings.avatar }}" alt=""/>
+		</a>
+
+		<h1 class="site-title">
+			<a href="{{ site.baseurl }}/">버즈니 보일러실 <span>buzzni tech blog</span></a>
+		</h1>
+	</div>
+    
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+    
+    <!-- Menu -->
+    <ul>
+        <li>
+            <a class="clear" href="#">
+                HOME
+            </a>
+        </li>
+        {% if site.theme_settings.portfolio %}
+        <li>
+            <a class="clear" href="#">
+                QUESTION
+            </a>
+        </li>
+        {% endif %}
+        {% if site.theme_settings.search %}
+        <li>
+            <a class="clear" href="{{ site.url }}{{ site.baseurl }}/search">
+               SEARCH <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+        </li>
+        {% endif %}
+        {% if site.theme_settings.tags %}
+        <li>
+            <a class="clear" href="{{ site.url }}{{ site.baseurl }}/tags">
+                <i class="fa fa-tags" aria-hidden="true"></i>
+            </a>
+        </li>
+        {% endif %}
+        
+    </ul>
+        
+	</nav>
+</header>

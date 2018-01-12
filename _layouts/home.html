@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+<div class="home">
+  {% if site.theme_settings.header_text %}
+  <div id="main" class="call-out"
+  style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
+    버즈니의 보다 나은 개발 환경을 만들기 위해<br/>
+    우리가 겪었던 다양한 문제들과 해결 과정 및 개발 문화를 공유합니다.
+  </div>
+  {% endif %}
+
+  <div class="posts">
+    {% for post in paginator.posts %}
+    <div class="post-teaser">
+        <header>
+          <div class="post-team">ENGINEERING</div>
+          <h1>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+              {{ post.title }}
+            </a>
+          </h1>
+          <!-- <p class="meta">
+            {{ post.date | date: "%B %-d, %Y" }}
+          </p> -->
+        </header>
+        <div class="excerpt">
+          {{ post.content | strip_html | truncate: "250" }}
+          <!--<a class="button" href="{{ post.url | prepend: site.baseurl }}">
+            {{ site.theme_settings.str_continue_reading }}
+          </a>-->
+        </div>
+        <div class="post-meta">
+            <div class="thumbnail">
+              <img src="http://tech.kakao.com/assets/images/pc/default_pic_s.png" />
+            </div>
+            <p class="name">조현제</p>
+            <p class="date">{{ post.date | date: "%Y.%m.%-d" }}</p>
+        </div>
+      {% if post.thumbnail %}
+        <div class="post-img">
+          <img src="{{ site.baseurl }}/{{ post.thumbnail }}">
+        </div>
+      {% endif %}      
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <!-- <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+      <i class="fa fa-chevron-left"></i>
+    </a> -->
+    {% endif %}
+    <ol>
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+      <li class="current-page">
+        <span>{{ page }}</span>
+      </li>
+        {% elsif page == 1 %}
+      <li>
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+      </li>
+        {% else %}
+      <li>        
+        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+      </li>      
+        {% endif %}
+    {% endfor %}
+    </ol>
+    {% if paginator.next_page %}
+    <!-- <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+      <i class="fa fa-chevron-right"></i>
+    </a> -->
+    {% endif %}
+  </div>
+  {% endif %}
+</div>

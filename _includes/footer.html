@@ -1,13 +1,15 @@
-<footer>
+{% if site.theme_settings.footer_text %}
+<footer class="site-footer">
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                {% include icons.html %}
+                </ul>
+            </div>
+    <p class="copyright">{{ site.theme_settings.footer_text }}</p>
 
-    <div class="container">
-
-        <div class="copyright">
-            &copy; <a href="http://www.buzzni.com/" target="_blank">Buzzni Inc</a>. All rights reserved. Powered by <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.
-        </div>
-
-    </div><!-- end .container -->
 
 </footer>
+{% endif %}
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
