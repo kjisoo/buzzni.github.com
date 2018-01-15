@@ -53,17 +53,6 @@
 </li>
 {% endif %}
 
-{% if site.theme_settings.facebook %}
-<li>
-	<a href="https://www.facebook.com/{{ site.theme_settings.facebook }}" title="{{ site.theme_settings.str_follow_on }} Facebook">
-		<span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-        </span>
-	</a>
-</li>
-{% endif %}
-
 {% if site.theme_settings.flickr %}
 <li>
 	<a href="https://www.flickr.com/photos/{{ site.theme_settings.flickr }}" title="{{ site.theme_settings.str_follow_on }} Flickr">
@@ -248,5 +237,22 @@
             <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
         </span>
 	</a>
+</li>
+{% endif %}
+
+
+{% if site.theme_settings.homepage %}
+<li>
+    <a href="http://buzzni.com/">
+        <img src="{{ site.baseurl }}/assets/img/icons/icon_1.png" />
+    </a>
+</li>
+{% endif %}
+
+{% if site.theme_settings.facebook %}
+<li>
+    <a href="http://buzzni.com/">
+        <img src="{{ site.baseurl }}/assets/img/icons/icon_2.png" />
+    </a>
 </li>
 {% endif %}

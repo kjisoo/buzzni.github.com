@@ -15,7 +15,7 @@ layout: default
     {% for post in paginator.posts %}
     <div class="post-teaser">
         <header>
-          <div class="post-team">ENGINEERING</div>
+          <div class="post-team">{{ post.type }}</div>
           <h1>
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
               {{ post.title }}
@@ -26,16 +26,20 @@ layout: default
           </p> -->
         </header>
         <div class="excerpt">
-          {{ post.content | strip_html | truncate: "250" }}
+          {{ post.content | strip_html | truncate: "150" }}
           <!--<a class="button" href="{{ post.url | prepend: site.baseurl }}">
             {{ site.theme_settings.str_continue_reading }}
           </a>-->
         </div>
         <div class="post-meta">
             <div class="thumbnail">
-              <img src="http://tech.kakao.com/assets/images/pc/default_pic_s.png" />
+              {% if post.image %}
+                <img src={{ site.baseurl }}/{{ post.image }} />
+              {% else %}
+                <img src="http://tech.kakao.com/assets/images/pc/default_pic_s.png" />
+              {% endif %}
             </div>
-            <p class="name">조현제</p>
+            <p class="name">{{ post.author }}</p>
             <p class="date">{{ post.date | date: "%Y.%m.%-d" }}</p>
         </div>
       {% if post.thumbnail %}
@@ -60,9 +64,9 @@ layout: default
       <li class="current-page">
         <span>{{ page }}</span>
       </li>
-        {% elsif page == 1 %}
+      {% elsif page == 1 %}
       <li>
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+        <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
       </li>
         {% else %}
       <li>        
