@@ -7,9 +7,7 @@ image: assets/img/character/roy.png
 type: ENGINEERING
 ---
 
-# iOS 개발하며 처음 부딪히는 문제 Reference Count에 대하여.
-
-# Objective-C 부터 Swift까지 Reference Count에 대하여
+## Objective-C 부터 Swift까지 Reference Count에 대하여
 
 iOS를 처음 공부를 하면서 접하게 되는 참조 카운트(reference count)에 대하여 짧은 글을 써보려고 합니다. c, c++, java, c#... 등의 다른 언어를 배우고 objective-c , swift를 접하는 분들이 많을것으로 생각되고 저 역시 c부터 공부를 하였고 이후 아이폰이 국내에 들어오면서 iOS개발자로 전향을 하게 되었습니다. 제가 이해했던 바를 정리함으로써 이 글을 보시는 분의 이해에 도움이 되었으면 합니다. 
 

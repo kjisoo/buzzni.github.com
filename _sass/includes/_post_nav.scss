@@ -8,9 +8,6 @@
         padding: 0;
         margin: 0;
     }
-    p {
-        @extend .meta;
-    }
     
     #previous-post {
         float: left;
@@ -18,5 +15,11 @@
     
     #next-post {
         float: right;
+        .back-menu {
+            color: #333;
+            font-size: 1em;
+            line-height: 50px;
+            font-weight: 300;            
+        }
     }
 }

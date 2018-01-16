@@ -7,9 +7,6 @@ image: assets/img/character/roland.png
 type: DATAINFRA
 ---
 
-
-# Spark와 Zeppelin 시작하기
-
 #### **시작하며**
 
 spark, zeppelin 시작하기 위한 quick start의 개념을 정리하고자 글을 작성 했습니다.  

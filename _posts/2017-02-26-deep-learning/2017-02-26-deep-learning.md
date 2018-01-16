@@ -7,8 +7,6 @@ image: assets/img/character/jason.png
 type: DATALABS
 ---
 
-# 누구나 읽는 딥러닝, Convolutional Neural Network
-
 저는 머신 러닝을 시작한 지 얼마 안 된 개발자입니다. 또한 이론을 깊게 공부하고 연구하는 것보다 빠르게 익히고 적용하는 것을 선호합니다. 이러한 제가 머신 러닝을 어떻게 입문했는가에 대해 써볼까 합니다. 또한 제목에도 쓰여있듯이 글은 딥러닝과 머신 러닝에 대해 자세히 서술하지 않았습니다. 전공자든 비전공자든 누구나 읽을 수 있고 기술의 느낌을 가져가는 것에 초점을 두었습니다. 처음에 머신 러닝을 공부하기 위해 Andrew Ng의 Machine Learning을 봤습니다. 그런데 저는 사실 다 안 봤습니다. 병행해서 공부하던 Convolutional Neural Network이 더 재밌어서. 
 
 ## Convolutional Neural Network(CNN)

@@ -1,5 +1,26 @@
 <div id="post-nav">
-  {% if page.previous.url %}
+  <div id="previous-post" class="post-nav-post">
+    <div class="author">
+      {% if page.image %}
+        <img src={{ site.baseurl }}/{{ page.image }} />
+      {% else %}
+        <img src="http://tech.kakao.com/assets/images/pc/default_pic_s.png" />
+      {% endif %}
+      <div class="author_info">
+        <p>By {{ page.author }}</p>
+        <p class="time">{{ page.date | date: "%Y.%m.%-d" }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="next-post" class="post-nav-post">
+    <a href="/" class="back-menu">
+      목록으로 돌아가기
+    </a>
+  </div>
+
+
+  <!-- {% if page.previous.url %}
   <div id="previous-post" class="post-nav-post">
       <p>{{ site.theme_settings.str_previous_post }}</p>
       <a href="{{ site.baseurl }}{{ page.previous.url }}">
@@ -14,5 +35,5 @@
         {{ page.next.title }}
       </a>
   </div>
-  {% endif %}
+  {% endif %} -->
 </div>

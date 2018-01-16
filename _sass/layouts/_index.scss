@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
     background-color: $header-desc-background-color;
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: 100;
     text-align: center;
     color: $header-desc-text-color;
@@ -14,7 +14,7 @@
 
     /* --- Responsive --- */
     @media screen and (max-width: 850px) {
-        background-size: 100% auto;
+        // background-size: 100% auto;
     } 
     
     //For white images
@@ -98,10 +98,21 @@
     }
     header {
         width: 80%;
+        @media (max-width: 1000px) {
+            width: 70%;
+        }
+
+        @media (max-width: 576px) {
+            // padding: $padding-small;
+        }
+        
     }
 
     .excerpt {
         width: 80%;
+        @media (max-width: 1000px) {
+            width: 70%;
+        }        
         margin-top: 1em;
         font-size: 0.8em;
         color: #606060;
@@ -116,7 +127,7 @@
         position: absolute;
         top: 75px;
         right: 20%;
-        width: 140px;
+        width: 70px;
         display: block;
         text-align: center;
             .thumbnail {

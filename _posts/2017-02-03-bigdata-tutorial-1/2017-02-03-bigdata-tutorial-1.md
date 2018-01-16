@@ -2,11 +2,10 @@
 layout: post
 title: 빅데이터 실전 튜토리얼 - 1
 tags: [bigdata, crawler, scrapy, beautifulsoup]
-author: buzzni
+author: 이동균
+image: assets/img/character/vincent.png 
 type: DATALABS
 ---
-
-# 빅데이터 실전 튜토리얼 - 1
 
 ### 크롤러 소개, Scrapy 및 BeautifulSoup 사용방법 소개
 

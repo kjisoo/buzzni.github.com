@@ -7,8 +7,6 @@ image: assets/img/character/yohan.png
 type: DATAINFRA
 ---
 
-# PostgreSQL 비정형 vs 관계 모델 데이터
-
 # 시작하며
 
 안녕하세요. 버즈니 데이터인프라팀의 요한입니다. 지난번 포스팅에서는 PostgreSQL에서 JSON을 다루기 위한 두가지 타입(JSON, JSONB)을 비교해 보고, 인덱싱을 적용하는 방법과 그 성능에 대해 알아보았었습니다. 이번에는 기존의 RBDMS의 관계 모델(Relation Model)과 비교하여 어떤 차이가 있는지 알아보려 합니다. 

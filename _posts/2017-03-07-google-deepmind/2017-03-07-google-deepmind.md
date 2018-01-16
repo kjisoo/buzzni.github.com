@@ -7,8 +7,6 @@ image: assets/img/character/ryan.png
 type: DATALABS
 ---
 
-# 추론하는 딥러닝 모델 - Google DeepMind의 Differential Neural Computer
-
 ****데이터랩스팀 김태훈 
 
 # 시작하며
