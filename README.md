@@ -1,331 +1,66 @@
-# Type on Strap [![Build Status](https://travis-ci.org/Sylhare/Type-on-Strap.svg?branch=master)](https://travis-ci.org/Sylhare/Type-on-Strap)
+#버즈니 기술 블로그
+버즈니의 새로운 **기술 블로그** 입니다.
+**개발자**뿐만 아니라 **디자이너**,**기획자**분들까지도 모두 자유롭게 버즈니에서
+일하는 방식등의 이야기들을 쓰실 수 있습니다.
 
-A free and open-source [Jekyll](https://jekyllrb.com) theme. Based on Rohan Chandra [type-theme](https://github.com/rohanchandra/type-theme) with a few new features:
+## 개발용 서버 띄우기
+내가 쓴 글을 확인하고 싶거나 템플릿등의 화면 수정을 원할땐 
+[jekyll](https://jekyllrb.com/)을 설치한 후 **jekyll serve**를 띄어서 확인할 수 있습니다.
 
-* Responsive design
-* Portfolio page for your projects
-* Tags compability
-* Bootstrap : [Get Bootstrap](http://getbootstrap.com/)
-* Search feature : [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)
-* Math Rendering : [KateX](https://github.com/Khan/KaTeX)
-* Seo Tags : [Jekyll-seo-tag](https://help.github.com/articles/search-engine-optimization-for-github-pages/)
-* Free of rights images from [pexels](https://www.pexels.com/)
-
-> [Demo](https://sylhare.github.io/Type-on-Strap/)
- 
-[![Default Type on Strap blog](https://github.com/Sylhare/Type-on-Strap/blob/master/screenshot.png?raw=true)](https://sylhare.github.io/Type-on-Strap/)
-
-## Table of Contents
-
-1. [Usage](https://github.com/Sylhare/Type-on-Strap#Usage)
-2. [Struture](https://github.com/Sylhare/Type-on-Strap#structure)
-3. [Configure Type on Strap](https://github.com/Sylhare/Type-on-Strap#configure-type-on-strap)
-4. [Layout](https://github.com/Sylhare/Type-on-Strap#layout)
-5. [Feature pages](https://github.com/Sylhare/Type-on-Strap#feature-pages)
-6. [Template as a Gem](https://github.com/Sylhare/Type-on-Strap#Template-as-a-Gem)
-7. [License](https://github.com/Sylhare/Type-on-Strap#license)
-
-## Usage
-
-1. Fork and clone the [Type on Strap repo](https://github.com/sylhare/Type-On-Strap): `git clone https://github.com/Sylhare/Type-on-Strap.git`
-2. Install [Jekyll](https://jekyllrb.com/docs/installation/): `gem install jekyll`, check [#1](https://github.com/Sylhare/Type-on-Strap/issues/1) if you have a problem.
-3. Install the theme's dependencies: `bundle install`
-4. Customize the theme
-	- Github Page: [update `_config.yml`](https://github.com/Sylhare/Type-on-Strap#site-configuration)
-5. Run the Jekyll server: `jekyll serve`
-
-## Structure
-
-Here are the main files of the template
+### jekyll 설치 및 개발 환경 세팅
 
 ```bash
-jekyll-theme-basically-basic
-├── _draft	               # To store your drafts, they won't be published on your site
-├── _includes	               # theme includes
-├── _layouts                   # theme layouts (see below for details)
-├── _portofolio	               # collection of article to be populated in the portfolio page
-├── _posts                     # Blog posts
-├── _sass                      # Sass partials 
-├── assets
-|  ├── js	               # theme javascript, Katex, jquery, bootstrap, jekyll search, 
-|  ├── css                     # isolated Bootstrap, font-awesome, katex and main css
-|  ├── fonts		       # Font-Awesome, Glyphicon, and other fonts
-|  └── img		       # Images used for the template
-├── pages
-|   ├── 404.md		       # To be displayed when url is wrong
-|   ├── about.md               # About example page
-|   ├── portfolio.html	       # Portfolio bootstrapped page
-|   ├── search.html	       # Search page
-|   └── search.json            # Specify the search target (page, post, collection)
-├── _config.yml                # sample configuration
-└── index.html                 # sample home page (blog page paginated)
-```
-	
-## Configure Type on Strap
-
-Open `_config.yml` in a text editor to change most of the blog's settings.
-
-If a variable in this document is marked as "optional", disable the feature by removing all text from the variable. 
-
-
-### Site configuration
-Configure Jekyll as your own blog or with a subpath in in `_config.yml`:
-
-Jekyll website *without* a subpath (such as a GitHub Pages website for a given username):
-
-```yml
-  baseurl: ""
-  url: "https://username.github.io"
+$ gem install jekyll
+$ cd buzzni.github.com
+$ bundle install
 ```
 
-Jekyll website *with* subpath (like the Type on Strap [demo](https://sylhare.github.io/Type-on-Strap/) page):
+### 개발 서버 띄우기
 
-```yml
-  baseurl: "/sub-directory"
-  url: "https://username.github.io/"
+```bash
+$ jekyll serve
 ```
+입력 후 브라우저에서 **127.0.0.1:4000** 으로 들어가면 확인 할수 있습니다.
 
-Please configure this  before using the theme.
 
-### Meta and Branding
+## 글쓰기
+프로젝트의 **_post** 폴더에 **"yyyy-mm-dd-제목"** 형태로 폴더를 만들고
+그 안에 마찬가지로 **"yyyy-mm-dd-제목.md"** 형태로 마크다운 글을 작성합니다.
 
-Meta variables hold basic information about your Jekyll site which will be used throughout the site and as meta properties for search engines, browsers, and the site's RSS feed.
+> **제목은 한글이 아닌 영어로 작성해주세요**
 
-Change these variables in `_config.yml`:
+### 글에 이미지 넣기
+다른 사이트의 이미지링크를 넣거나 업로드해서 넣는 경우는 상관없지만
+내 이미지를 넣고싶은경우 프로젝트의 **assets** 폴더의 **img** 폴더에 이미지를 넣고
+해당 글 이미지를 **{{ site.url }}/assets/img/이미지.png** 와같은 형태로 링크를
+지정해주시면 이미지를 넣을 수 있습니다.
 
-```yml
-  theme_settings:
-    title: My Jekyll Blog                 # Name of website
-    avatar: assets/img/triangular.svg     # Path of avatar image, to be displayed in the theme's header
-    gravatar: f98....6bfc                 # MD5 hash of your email address
-    description: My blog posts            # Short description, primarily used by search engines
+### 글 헤더 보일러플레이트
 ```
-
-### Customizing text
-
-#### Footer and Header's text
-
-Customize your site header/footer with these variables in `_config.yml`:
-
-```yml
-  theme_settings:
-    header_text: Welcome to my Jekyll blog
-    header_text_feature_image: assets/img/sample3.png
-    footer_text: Copyright 2017
-```
-
-#### Localisation string
-
-Change localization string variables in `_config.yml`.
-
-English text used in the theme has been grouped  so you can quickly translate the theme or change labels to suit your needs.
-
-```yml
-  theme_settings:
-     str_follow_on: "Follow on"
-     str_rss_follow: "Follow RSS feed"
-     str_email: "Email"
-     str_next_post: "Next post"
-     str_previous_post: "Previous post"
-     str_next_page: "Next"
-     str_previous_page: "Prev"
-     str_continue_reading: "Continue reading"
-     str_javascript_required_disqus: "Please enable JavaScript to view comments."
-```
-
-
-### Other features
-
-Jekyll works with [liquid](https://shopify.github.io/liquid/) tags usually represented by:
-
-```
-{{ liquid.tag | filter }}
-```
-
-These are useful to render your jekyll files. You can learn more about them on [shopify's doc](https://help.shopify.com/themes/liquid/basics)
-
-### Footer's icons
-
-Display the site's icon from [Font Awesome](https://fortawesome.github.io/Font-Awesome/) in the footer. All icon variables should be your username enclosed in quotes (e.g. "username") in `_config.yml`, except for the following variables:
-
-```yml
-  theme_settings:
-     rss: true
-     email_address: type@example.com
-     linkedin: ttps://www.linkedin.com/in/FirstLast
-     stack_exchange: https://stackoverflow.com/users/0000/first-last
-```
-
-### Comments (via Disqus)
-
-Optionally, if you have a [Disqus](https://disqus.com/) account, you can show a 
-comments section below each post.
-
-To enable Disqus comments, add your [Disqus shortname](https://help.disqus.com/customer/portal/articles/466208) to your project's `_config.yml` file:
-
-```yml
-  theme_settings:
-     disqus_shortname: my_disqus_shortname
-```
-
-### Google Analytics
-
-To enable Google Analytics, add your [tracking ID](https://support.google.com/analytics/answer/1032385) 
-to `_config.yml` like so:
-
-```yml
-  theme_settings:
-     google_analytics: UA-NNNNNNNN-N
-```
-
-### Math typesetting
-
-When KateX is set in `_config.yml`:
-
-```yml
-  theme_settings:
-     katex: true # to Enable it
-```
-
-You can then wrap math expressions with `$$` signs in your posts and make sure you have set the `katex` variable in `_config.yml` to `true` for math typesetting.
-
-For inline math typesetting, type your math expression on the *same line* as your content. For example:
-
-```latex
-Type math within a sentence $$2x^2 + x + c$$ to display inline
-```
-
-For display math typesetting, type your math expression on a *new line*. For example:
-
-```latex
-$$
-  \bar{y} = {1 \over n} \sum_{i = 1}^{n}y_i
-$$
-```
-
-## Layout
-Please refer to the [Jekyll docs for writing posts](https://jekyllrb.com/docs/posts/). Non-standard features are documented below.
-
-### Layout: Post
-
-This are the basic features you can use with the  `post` layout.
-
-```yml
 ---
 layout: post
-title: Hello World                                # Title of the page
-subtitle: "This is a subtitle"                    # A subtitle can be displayed below your title
-feature-img: "assets/img/sample.png"              # Add a feature-image to the post
-thumbnail: "assets/img/thumbnail/sample-th.png"   # Add a thumbnail image on blog view
-tags: [sample, markdown, html]
+title: 파이써니스타를 위한 슬랙 봇 작성기
+tags: [python, slack, bot, slackbot, chatops]
+author: 이동균
+image: assets/img/character/vincent.png 
+type: ENGINEERING
 ---
 ```
+**title**은 **글의 제목**, **tags**는 **글의 태그**들,  
+**author**은 **저자명**, **image**는 **저자 이미지**, 
+**type**은 해당글의 **카테고리**를 의미합니다.
 
-With `thumbnail`, you can add a smaller image than the `feature-img`. If you don't want/have a thumbnail you can still use the same image as the feature one.
 
-### Layout: Page
-
-The page layout have a bit more features explained here.
-
-```yml
----
-layout: page
-title: "About" 
-subtitle: "This is a subtitle"   
-feature-img: "assets/img/sample.png" 
-permalink: /about.html               # Set a permalink your your page
-hide: true                           # Prevent the page title to appear in the navbar
-tags: [sample, markdown, html]
----
+## 글 올리기
+해당 내용을 커밋하고 메인 저장소에 푸시하면 됩니다.
+```bash
+$ git commit -m "2018년 1월 15일 블로그 포스팅"
+$ git push origin master
 ```
 
-The hide only hides your page from the navigation bar, it is however still generated and can be access through its link. Use the `_draft` folder to keep files from being generated on your site.
-
-### Layout: Bootstrap
-
-This is the page layout modified to have bootstrap activated to format your content accordingly with the theme.
-
-```yml
---- 
-layout: bootstrap
----
-```
-
-### Layout: Default
-
-This layout includes the head, navigation bar and footer around your content.
-
-## Feature pages
-
-All feature pages besides the "home" one are stored in the `page` folder, they will appear in the navigation bar unless you set `Hide: true` in the front matter. 
-
-Here are the documentation for the other feature pages that can be added through `_config.yml`.
-
-### Home
-
-This page is the used as the home page of the template (in the `index.html`). It displays the list of article in `_posts`.
-You can use this layout in another page (adding a title to it will make it appear in the navigation bar).
-
-### Portfolio
-
-Portfolio is a feature bootstrapped page that will take all the markdown/html files in the `_portfolio` folder to create a 3x3 image portfolio matrix.
-
-The portfolio page can be enable/disable in the navigation bar through the `_config.yml` via:
-```yml
-# Scripts / Feature
-  portfolio: true
-```
-
-### Search
-
-The search feature is based on [Simple-Jekyll-search](https://github.com/christian-fei/Simple-Jekyll-Search) there is a `search.json` file that will create a list of all of the site posts, pages and portfolios. 
-
-Then there's a `search.js` displaying the formated results entered in the `search.html` page. 
+## 기타
+이 블로그는 **jekyll theme** 중 [type-on-strap](https://github.com/sylhare/Type-on-Strap)라는 theme를 fork하여 만들어 졌고
+어떤 형태로 고쳐서 사용하셔도 무방합니다.
+감사합니다.
 
 
-The search page can be enable/disable in the navigation bar through the `_config.yml` via:
-```yml
-# Scripts / Feature
-  search: true
-```
-
-### Tags
-
-Tags should be placed between `[]` in your post metadata. Seperate each tag with a comma. Tags are recommended for posts and portfolio items.
-
-For example:
-
-```yml
----
-layout: post
-title: Markdown and HTML
-tags: [sample, markdown, html]
----
-```
-
-> Tags are case sensitive `Tag_nAme` ≠ `tag_name`
-
-All the tags will be listed in `tags.html` with a link toward the pages or posts.
-The tags page can be enable/disable in the navigation bar through the `_config.yml` via:
-
-```yml
-# Scripts / Feature
-  tags: true
-```
-
-## Template as a Gem
-
-You can use Type-on-strap as a [gem](https://rubygems.org/gems/type-on-strap). Checkout an example in the [gem-demo branch](https://github.com/Sylhare/Type-on-Strap/tree/gem-demo).
-To make the feature pages available in from the gem I created them as layouts that can be invoked in the pages folder.
-
-So if you're using the template as a theme, Make sure you have:
-  - A `index.html` file
-  - The right `_config.yml` with the theme setting such as `theme: type-on-strap` uncommented
-  - The feature page included. (ex: as it is already in `pages`)
-  - Some content ready in `_posts` and `_portfolio` to be displayed
-
-Now you can use any theme gem with github pages : [29/11/2017 Github Pages Broadcast](https://github.com/blog/2464-use-any-theme-with-github-pages)
-
-## License
-
-[The MIT License (MIT)](https://raw.githubusercontent.com/Sylhare/Type-on-Strap/master/LICENSE)

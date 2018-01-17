@@ -83,6 +83,14 @@ article {
         color: #333;
         font-weight: 300;
     }
+    blockquote {
+        border-left: 2px solid #FEC125;
+        background-color: #fffee4;
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    }
     img {
         margin: 35px auto;
         position: relative;
