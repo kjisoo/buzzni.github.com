@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: ""
-url: "http://buzzni.github.io"
+url: "https://boiler.buzzni.com"
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
