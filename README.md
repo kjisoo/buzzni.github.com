@@ -10,7 +10,6 @@
 ### jekyll 설치 및 개발 환경 세팅
 
 ```bash
-$ gem install jekyll
 $ cd buzzni.github.com
 $ bundle install
 ```
@@ -18,7 +17,7 @@ $ bundle install
 ### 개발 서버 띄우기
 
 ```bash
-$ jekyll serve
+$ bundle exec jekyll serve
 ```
 입력 후 브라우저에서 **127.0.0.1:4000** 으로 들어가면 확인 할수 있습니다.
 
