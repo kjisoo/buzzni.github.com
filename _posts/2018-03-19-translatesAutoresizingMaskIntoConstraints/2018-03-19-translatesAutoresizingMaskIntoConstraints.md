@@ -13,32 +13,31 @@ UIView의 [translatesAutoresizingMaskIntoConstraints](https://developer.apple.co
 storyboard, xib와 같이 IB로 생성된 뷰는 자동으로 해당 속성이 false가 됩니다. 반대로 코드로 뷰를 작성할 경우 기본값은 true입니다.
 
 해당 속성덕분에 아래의 코드가 오토 레이아웃으로 만든 뷰에서 사용이 가능합니다.
-    
-    
-    let someView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-    self.view.addSubview(someView)
-
+{% highlight swift %}
+let someView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+self.view.addSubview(someView)
+{% endhighlight %}
 자세히 알아보면, autoresizing mask를 통해 변화된 사이즈, 위치를 constraint를 사용하는 다른 뷰들과 함께 사용할 수 있도록 제약을 만들어줍니다.
 제약은 바로 만들어지는것은 아니고, 필요할 때 만들어집니다.
-    
-    
-    let autoResizingView = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-    autoResizingView.backgroundColor = .orange
-    autoResizingView.translatesAutoresizingMaskIntoConstraints = true // 원래 true이지만, 의미 전달을 위해
-    autoResizingView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // 다음 테스트를 위해 미리 할당
-    self.view.addSubview(autoResizingView)
+{% highlight swift %}
+let autoResizingView = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
+autoResizingView.backgroundColor = .orange
+autoResizingView.translatesAutoresizingMaskIntoConstraints = true // 원래 true이지만, 의미 전달을 위해
+autoResizingView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // 다음 테스트를 위해 미리 할당
+self.view.addSubview(autoResizingView)
+{% endhighlight %}
 
 위 코드를 오토레이아웃으로 작성된 뷰에서 확인해보면, 아무 제약도 생기지 않습니다. `autoResizingView` 가 하위뷰로 들어갔지만, 해당 뷰와 연관된 제약이 없기때문입니다.
-    
-    
-    let constraintView = UIView()
-    constraintView.backgroundColor = .blue
-    constraintView.translatesAutoresizingMaskIntoConstraints = false
-    self.view.addSubview(constraintView)
-    constraintView.addConstraint(NSLayoutConstraint(item: constraintView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50))
-    constraintView.addConstraint(NSLayoutConstraint(item: constraintView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50))
-    self.view.addConstraint(NSLayoutConstraint(item: autoResizingView, attribute: .bottom, relatedBy: .equal, toItem: constraintView, attribute: .top, multiplier: 1, constant: 0))
-    self.view.addConstraint(NSLayoutConstraint(item: autoResizingView, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .left, multiplier: 1, constant: 0))
+{% highlight swift %}
+let constraintView = UIView()
+constraintView.backgroundColor = .blue
+constraintView.translatesAutoresizingMaskIntoConstraints = false
+self.view.addSubview(constraintView)
+constraintView.addConstraint(NSLayoutConstraint(item: constraintView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50))
+constraintView.addConstraint(NSLayoutConstraint(item: constraintView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50))
+self.view.addConstraint(NSLayoutConstraint(item: autoResizingView, attribute: .bottom, relatedBy: .equal, toItem: constraintView, attribute: .top, multiplier: 1, constant: 0))
+self.view.addConstraint(NSLayoutConstraint(item: autoResizingView, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .left, multiplier: 1, constant: 0))
+{% endhighlight %}
 
 위 코드를 이어서 붙이면, `constraintView`는 50, 50사이즈며 `constraintView`의 top과 `autoResizingView`의 bottom 을 일치 시킵니다. `autoResizingView`뷰가 다른 뷰와의 제약이 생겨 필요할 때가 되었습니다.
 
