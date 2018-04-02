@@ -52,14 +52,16 @@ storyboard, xib와 같이 IB로 생성된 뷰는 자동으로 해당 속성이 f
 
 view의 frame이 (0, 0, 375, 667)임을 생각하면, `autoResizingView`의 width는 375+25 = 400, height는 667-267 = 400으로 위에서 설정한 사이즈가 나옵니다.
 
-![translatesautoresizingmaskintoconstraints-1-500x330](http://blog.jisoo.net/static/media/uploads/translatesAutoresizingMaskIntoConstraints/.thumbnails/translatesautoresizingmaskintoconstraints-1.png/translatesautoresizingmaskintoconstraints-1-500x330.png)화면을 회전해도 정상적으로 작동합니다.
+![translatesautoresizingmaskintoconstraints-1-500x330](http://blog.jisoo.net/assets/img/posts/2018-03-02-UIView-translatesAutoresizingMaskIntoConstraints/1.png)  
+화면을 회전해도 정상적으로 작동합니다.
 
 `autoResizingView`의 mask는 [.flexibleWidth, .flexibleHeight]이었기 때문에, 화면 스크린이 늘어난/줄어난 사이즈와 동일하게 뷰의 width, height가 늘어나거나 줄어듭니다.
 따라서 width는 375 -> 667로 292만큼 늘어났고, height는 667 -> 375로 292만큼 줄어들어 해당 뷰의 사이즈는 692, 108이 되었습니다.
 위 내용을 바탕으로 제약조건도 업데이트 됩니다.
 
 만약 `autoResizingView`의 해당 속성을 false로 바꾸게 되면 자동으로 만들어진 제약들이 모두 사라지게 됩니다.
-![translatesautoresizingmaskintoconstraints-2](http://blog.jisoo.net/static/media/uploads/translatesAutoresizingMaskIntoConstraints/translatesautoresizingmaskintoconstraints-2.png)속성을 false로 바꾸어 자동으로 생성된 제약들이 모두 사라져 사이즈가 0,0이 되어 화면에 보이지 않습니다.
+![translatesautoresizingmaskintoconstraints-2](http://blog.jisoo.net/assets/img/posts/2018-03-02-UIView-translatesAutoresizingMaskIntoConstraints/2.png)  
+속성을 false로 바꾸어 자동으로 생성된 제약들이 모두 사라져 사이즈가 0,0이 되어 화면에 보이지 않습니다.
 
 xib를 사용하여 UI를 만들어도 속성의 기본값이 true인 UIViewController의 view와 Cell의 contentView가 있습니다.
 `UIViewController`의 `func loadView()`에서 뷰가 코드로 생성되고 바인딩 됩니다.
